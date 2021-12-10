@@ -11,10 +11,16 @@
   color: $primary;
 }
 
+body {
+  background-color: $background-color;
+}
+
+// Nav bar section
+
 .side-nav {
   text-align: center;
   width: 100%;
-  position: fixed;
+  //   position: fixed;
   background-color: $aside-background;
   height: 80vh;
 
@@ -53,6 +59,119 @@
       background-color: $nav-backgroung;
       margin: 15px;
     }
+  }
+}
+
+// home section
+
+.home-section {
+  text-align: left;
+  margin: 200px 40px 10px 40px;
+
+  p {
+    font-size: 30px;
+  }
+  h1 {
+    margin: 15px 0;
+  }
+  h1,
+  span {
+    font-size: 50px;
+  }
+  span {
+    color: $secondary;
+    font-size: 50px;
+  }
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  a {
+    background-color: $button-bg-color;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .fas {
+    margin: 10px;
+  }
+}
+
+// About me section
+
+.about-me {
+  margin: 100px 40px 10px 40px;
+  h2 {
+    font-size: 45px;
+    word-spacing: 2px;
+    font-weight: lighter;
+    color: $secondary;
+  }
+  span {
+    color: white;
+  }
+  .hr {
+    height: 0.5px;
+    width: 100%;
+    background: #646464;
+    margin-top: 10px;
+  }
+  .about-me-flex {
+    margin-top: 30px;
+    li {
+      color: white;
+      font-size: 18px;
+      padding: 10px 0;
+      line-height: 30px;
+      font-weight: 500;
+    }
+    span {
+      color: $secondary;
+    }
+    button {
+      background-color: $button-bg-color;
+      font-size: 20px;
+      padding: 7px;
+      width: 240px;
+      border-radius: 20px;
+      border: none;
+      margin-top: 20px;
+      &:hover{
+        background-color: $secondary;
+    }
+      .fas {
+        margin-left: 15px;
+      }
+     
+    }
     
+    .about-me-items {
+      .experience-grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+        max-width: 150px;
+
+        .experience-grid-items {
+          background-color: $button-bg-color;
+          padding: 40px;
+          text-align: center;
+          :first-child{
+              color: $secondary;
+              font-size: 50px;
+              padding-bottom: 15px;
+              font-weight: lighter;
+             }
+          h3{
+              font-size: 22px;
+              text-transform: capitalize;
+              line-height: 30px;
+            //   padding: 20px;
+          }
+        }
+      }
+    }
   }
 }
