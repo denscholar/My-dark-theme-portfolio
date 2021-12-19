@@ -18,12 +18,16 @@ body {
 // Nav bar section
 
 .side-nav {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  top: 0;
   text-align: center;
   width: 100%;
-  //   position: fixed;
   background-color: $aside-background;
-  height: 80vh;
-
+  height: 150vh;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
   img {
     border-radius: 50%;
     width: 170px;
@@ -65,9 +69,47 @@ body {
 // home section
 
 .home-section {
-  text-align: left;
-  margin: 200px 40px 10px 40px;
+  .toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $nav-backgroung;
+    width: 50px;
+    cursor: pointer;
+    padding: 5px 5px;
+    z-index: 1;
+    div {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 3px;
+    }
+  }
+  .cancel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: $nav-backgroung;
+    width: 50px;
+    cursor: pointer;
+    padding: 3px 3px;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    p {
+      margin: 2px;
+      text-align: center;
+      font-size: 25px;
 
+    }
+  }
+  text-align: left;
+  margin: 100px 40px 200px 40px;
+  padding: 8em 0;
   p {
     font-size: 30px;
   }
@@ -85,13 +127,17 @@ body {
   .description {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   a {
     background-color: $button-bg-color;
     font-size: 22px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 10px 15px;
     border-radius: 20px;
+    &:hover {
+      background-color: $secondary;
+    }
   }
   .fas {
     margin: 10px;
@@ -101,7 +147,8 @@ body {
 // About me section
 
 .about-me {
-  margin: 100px 40px 10px 40px;
+  margin: 20px 20px 10px 20px;
+  padding: 2em 0;
   h2 {
     font-size: 45px;
     word-spacing: 2px;
@@ -137,40 +184,458 @@ body {
       border-radius: 20px;
       border: none;
       margin-top: 20px;
-      &:hover{
+      &:hover {
         background-color: $secondary;
-    }
+      }
       .fas {
         margin-left: 15px;
       }
-     
     }
-    
+
     .about-me-items {
       .experience-grid {
-        margin-top: 20px;
+        margin: 20px 20px;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 30px;
+        grid-template-columns: repeat(1, 200px);
+        row-gap: 20px;
         max-width: 150px;
 
         .experience-grid-items {
           background-color: $button-bg-color;
           padding: 40px;
           text-align: center;
-          :first-child{
-              color: $secondary;
-              font-size: 50px;
-              padding-bottom: 15px;
-              font-weight: lighter;
-             }
-          h3{
-              font-size: 22px;
-              text-transform: capitalize;
-              line-height: 30px;
-            //   padding: 20px;
+          :first-child {
+            color: $secondary;
+            font-size: 50px;
+            padding-bottom: 15px;
+            font-weight: lighter;
+          }
+          h3 {
+            font-size: 22px;
+            text-transform: capitalize;
+            line-height: 30px;
           }
         }
+      }
+    }
+  }
+}
+
+// Education Section
+.education-section {
+  margin: 50px 30px 10px 30px;
+  padding: 2em 0;
+  .project-heading {
+    font-size: 42px;
+    word-spacing: 2px;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+  }
+  span {
+    color: $secondary;
+  }
+  .hr {
+    height: 0.5px;
+    width: 100%;
+    background: #646464;
+    margin-top: 10px;
+  }
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 50px;
+    grid-row-gap: 10px;
+
+    h2 {
+      margin: 5px 20px;
+      padding-left: 30px;
+      border-left: 5px solid $secondary;
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    .grid-items {
+      .description {
+        margin: 10px 10px 40px 20px;
+        border-left: 2px solid white;
+        padding-left: 30px;
+        font-size: 16px;
+        line-height: 22px;
+        text-transform: normal;
+      }
+    }
+  }
+  .graduation-cap {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+    .year {
+      background-color: $button-bg-color;
+      padding: 7px;
+      border-radius: 40px;
+      width: 100px;
+      text-align: center;
+    }
+
+    .graduation-items {
+      background-color: $secondary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      .fas {
+        font-size: 25px;
+      }
+
+      .grid-items {
+        border-left: 10px solid white;
+      }
+    }
+  }
+}
+
+// Portfolio Section
+.portfolio-section {
+  // margin: 20px 50px 10px 20px;
+  padding: 2em 0;
+  text-align: left;
+  .project-heading {
+    font-size: 42px;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2px;
+  }
+  span {
+    color: $secondary;
+  }
+  .hr {
+    height: 0.5px;
+    width: 100%;
+    background: #646464;
+    margin-top: 10px;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    .card {
+      border-radius: 12px;
+      position: relative;
+      width: 300px;
+      height: 320px;
+      margin: 15px;
+      overflow: hidden;
+      .imgBx,
+      .contentbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .contentbox::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgb(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.9)
+        );
+        transform: scaleX(0);
+        transition: transform 0.5s ease-out;
+        transform-origin: right;
+        transition-delay: 0.5s;
+      }
+      &:hover .contentbox::before {
+        transform: scaleX(1);
+        transition: transform 0.5s ease-in-out;
+        transform-origin: right;
+        transition-delay: 0.5s;
+      }
+      .contentbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+          position: relative;
+          padding: 20px;
+          z-index: 1;
+          transition: 0.5s;
+          transform: translateX(-300px);
+          transition-delay: 0s;
+          h3 {
+            font-size: 1.3em;
+            color: $secondary;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+          p {
+            font-size: 1em;
+            line-height: 1.4em;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 25px;
+          }
+
+          a {
+            background-color: $secondary;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin: 5px;
+          }
+        }
+      }
+    }
+    :hover .contentbox .content {
+      transform: translateX(0px);
+      transition-delay: 0.5s;
+    }
+  }
+}
+// Contact-me section
+.contact-me {
+  margin: 20px 20px 10px 20px;
+  .hr {
+    height: 0.5px;
+    width: 100%;
+    background: #646464;
+    margin-top: 10px;
+  }
+  .project-heading {
+    font-size: 42px;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2px;
+  }
+  span {
+    color: $secondary;
+  }
+  .contact-flex-items {
+    h3 {
+      font-size: 25px;
+      color: white;
+      padding: 40px 20px 20px 10px;
+      font-weight: 300;
+    }
+    li {
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      .far,
+      .fas {
+        color: $secondary;
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+  .form {
+    ul {
+      margin: 20px;
+      li input[type="text"],
+      input[type="email"] {
+        font-size: 16px;
+        padding: 15px;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(26, 25, 25);
+        border: none;
+        margin-top: 20px;
+        outline: none;
+      }
+      li {
+        textarea {
+          height: 150px;
+          width: 100%;
+          padding: 15px;
+          background-color: rgb(26, 25, 25);
+          border: none;
+          margin-top: 20px;
+          outline: none;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .btn {
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      margin: 0 20px;
+      background-color: rgb(26, 25, 25);
+      &:hover {
+        background-color: $secondary;
+      }
+      .far {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+// Media Query
+$breakpoint-desktop: 992px;
+@media screen and (min-width: $breakpoint-desktop) {
+  .side-nav {
+    text-align: center;
+    width: 25%;
+    position: fixed;
+    max-height: 110vh;
+    margin: 0;
+    display: flex;
+  }
+
+  .main-section {
+    margin-left: 25%;
+    padding: 20px;
+    line-height: 23.04px;
+    letter-spacing: normal;
+
+    .home-section {
+      padding-top: 200px;
+      margin-bottom: 17em;
+      .description {
+        margin-right: 10%;
+      }
+      h1 {
+        padding: 20px 0;
+      }
+
+      .toggle {
+        display: none;
+      }
+
+      .cancel{
+        display: none;
+      }
+    }
+    // About me section
+    .about-me {
+      padding-top: 70px;
+      h2 {
+        margin-bottom: 10px;
+        padding-top: 40px;
+      }
+      .about-me-flex {
+        margin-right: 15em;
+        ul {
+          margin-right: 25px;
+        }
+        display: flex;
+        justify-content: start;
+        align-content: center;
+        align-items: center;
+        .about-me-items {
+          .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+          }
+        }
+      }
+    }
+
+    // Education
+    .education-section {
+      margin-bottom: 10em;
+      padding-top: 15px;
+      h2 {
+        margin-bottom: 30px;
+        padding-top: 30px;
+      }
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 20px;
+        row-gap: 0;
+
+        .grid-items {
+          .description {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    // portfolio
+
+    .portfolio-section {
+      margin-bottom: 3em;
+      .project-heading {
+        font-size: 42px;
+        word-spacing: 2px;
+        text-align: center;
+        font-weight: lighter;
+        color: white;
+        letter-spacing: 2px;
+        padding: 12px;
+      }
+      span {
+        color: $secondary;
+      }
+      .hr {
+        height: 0.5px;
+        width: 100%;
+        background: #646464;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .card {
+          height: 17rem;
+          // width: 15em;
+        }
+      }
+    }
+
+    .contact-me {
+      margin-bottom: 5em;
+      .project-heading {
+        margin-bottom: 30px;
+        // padding-top: 30px;
+      }
+    }
+    .contact-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      form {
+        width: 40em;
+      }
+      h3 {
+        font-size: 30px;
+        font-weight: 200;
+        letter-spacing: 5px;
       }
     }
   }
