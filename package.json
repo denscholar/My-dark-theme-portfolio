@@ -21,7 +21,8 @@
     "gulp-sass-glob": "^1.1.0",
     "is-descriptor": "^3.0.0",
     "node-sass": "^7.0.0",
-    "sass": "^1.44.0"
+    "sass": "^1.44.0",
+    "simplebar": "^5.3.6"
   },
   "devDependencies": {
     "gulp": "^4.0.0",

@@ -25,43 +25,45 @@ body {
   text-align: center;
   width: 100%;
   background-color: $aside-background;
-  height: 150vh;
-  transition: transform 0.5s ease-in-out;
+  min-height: 100vh;
+  transition: 0.5s ease-out;
   z-index: 1;
   img {
     border-radius: 50%;
-    width: 170px;
-    height: 170px;
-    margin: 60px 0 15px;
+    width: 130px;
+    height: 130px;
+    margin: 70px 0 0 0;
     border: 8px solid $secondary;
+    object-fit: cover;
   }
 
   h2 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: lighter;
     padding: 5px;
   }
 
   p {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 300;
     padding-bottom: 7px;
   }
 
   ul {
     margin: 20px 15px;
     background-color: $aside-background;
+    cursor: pointer;
     :hover {
       background-color: $secondary;
     }
 
     li {
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
-      padding: 10px;
+      padding: 8px;
       border-radius: 100px;
       background-color: $nav-backgroung;
-      margin: 15px;
+      margin: 12px;
     }
   }
 }
@@ -69,6 +71,9 @@ body {
 // home section
 
 .home-section {
+  text-align: left;
+  margin: 0px 18px 70px 22px;
+  padding-top: 11em;
   .toggle {
     position: fixed;
     top: 20px;
@@ -104,12 +109,8 @@ body {
       margin: 2px;
       text-align: center;
       font-size: 25px;
-
     }
   }
-  text-align: left;
-  margin: 100px 40px 200px 40px;
-  padding: 8em 0;
   p {
     font-size: 30px;
   }
@@ -118,21 +119,21 @@ body {
   }
   h1,
   span {
-    font-size: 50px;
+    font-size: 40px;
   }
   span {
     color: $secondary;
-    font-size: 50px;
+    font-size: 30px;
   }
   .description {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   a {
     background-color: $button-bg-color;
     font-size: 22px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 15px;
     border-radius: 20px;
     &:hover {
@@ -147,13 +148,13 @@ body {
 // About me section
 
 .about-me {
-  margin: 20px 20px 10px 20px;
-  padding: 2em 0;
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
   h2 {
-    font-size: 45px;
-    word-spacing: 2px;
+    font-size: 40px;
     font-weight: lighter;
     color: $secondary;
+    letter-spacing: 1.5px;
   }
   span {
     color: white;
@@ -165,11 +166,10 @@ body {
     margin-top: 10px;
   }
   .about-me-flex {
-    margin-top: 30px;
     li {
       color: white;
-      font-size: 18px;
-      padding: 10px 0;
+      font-size: 17px;
+      padding: 7px 0;
       line-height: 30px;
       font-weight: 500;
     }
@@ -198,22 +198,23 @@ body {
         display: grid;
         grid-template-columns: repeat(1, 200px);
         row-gap: 20px;
-        max-width: 150px;
 
         .experience-grid-items {
           background-color: $button-bg-color;
-          padding: 40px;
+          padding: 20px;
           text-align: center;
+          max-width: 140px;
+          max-height: 140px;
           :first-child {
             color: $secondary;
-            font-size: 50px;
+            font-size: 40px;
             padding-bottom: 15px;
             font-weight: lighter;
           }
           h3 {
-            font-size: 22px;
+            font-size: 18px;
             text-transform: capitalize;
-            line-height: 30px;
+            line-height: 25px;
           }
         }
       }
@@ -223,14 +224,15 @@ body {
 
 // Education Section
 .education-section {
-  margin: 50px 30px 10px 30px;
-  padding: 2em 0;
+  text-align: left;
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
   .project-heading {
-    font-size: 42px;
-    word-spacing: 2px;
+    font-size: 40px;
     text-align: center;
     color: white;
     font-weight: lighter;
+    letter-spacing: 1.5px;
   }
   span {
     color: $secondary;
@@ -244,8 +246,8 @@ body {
   .education-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding-top: 50px;
-    grid-row-gap: 10px;
+    padding-top: 20px;
+    // grid-row-gap: 100px;
 
     h2 {
       margin: 5px 20px;
@@ -260,9 +262,10 @@ body {
         margin: 10px 10px 40px 20px;
         border-left: 2px solid white;
         padding-left: 30px;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
         text-transform: normal;
+        height: 20vh;
       }
     }
   }
@@ -274,10 +277,11 @@ body {
     align-content: center;
     .year {
       background-color: $button-bg-color;
-      padding: 7px;
+      padding: 10px;
       border-radius: 40px;
-      width: 100px;
-      text-align: center;
+      width: 50%;
+      font-size: 14px;
+      text-align: left;
     }
 
     .graduation-items {
@@ -291,7 +295,6 @@ body {
       .fas {
         font-size: 25px;
       }
-
       .grid-items {
         border-left: 10px solid white;
       }
@@ -301,16 +304,14 @@ body {
 
 // Portfolio Section
 .portfolio-section {
-  // margin: 20px 50px 10px 20px;
-  padding: 2em 0;
-  text-align: left;
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
   .project-heading {
-    font-size: 42px;
-    word-spacing: 2px;
+    font-size: 40px;
     text-align: center;
     font-weight: lighter;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
   span {
     color: $secondary;
@@ -327,12 +328,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1100px;
     .card {
       border-radius: 12px;
       position: relative;
-      width: 300px;
-      height: 320px;
+      width: 250px;
+      height: 250px;
       margin: 15px;
       overflow: hidden;
       .imgBx,
@@ -348,7 +348,7 @@ body {
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: fill;
         }
       }
       .contentbox::before {
@@ -393,7 +393,7 @@ body {
             letter-spacing: 1px;
           }
           p {
-            font-size: 1em;
+            font-size: 15px;
             line-height: 1.4em;
             font-weight: 300;
             color: white;
@@ -420,7 +420,8 @@ body {
 }
 // Contact-me section
 .contact-me {
-  margin: 20px 20px 10px 20px;
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
   .hr {
     height: 0.5px;
     width: 100%;
@@ -428,12 +429,11 @@ body {
     margin-top: 10px;
   }
   .project-heading {
-    font-size: 42px;
-    word-spacing: 2px;
+    font-size: 40px;
     text-align: center;
     font-weight: lighter;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
   span {
     color: $secondary;
@@ -447,7 +447,7 @@ body {
     }
     li {
       font-size: 18px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       font-weight: 300;
       .far,
       .fas {
@@ -504,7 +504,7 @@ body {
   }
 }
 
-// Media Query
+// .................................Media Querie (992 screen)...........................
 $breakpoint-desktop: 992px;
 @media screen and (min-width: $breakpoint-desktop) {
   .side-nav {
@@ -513,130 +513,182 @@ $breakpoint-desktop: 992px;
     position: fixed;
     max-height: 110vh;
     margin: 0;
-    display: flex;
+    display: block;
   }
-
   .main-section {
     margin-left: 25%;
     padding: 20px;
     line-height: 23.04px;
     letter-spacing: normal;
-
-    .home-section {
-      padding-top: 200px;
-      margin-bottom: 17em;
-      .description {
-        margin-right: 10%;
-      }
-      h1 {
-        padding: 20px 0;
-      }
-
-      .toggle {
-        display: none;
-      }
-
-      .cancel{
-        display: none;
-      }
+  }
+  .home-section {
+    padding-top: 10em 20em;
+    p{
+      font-size: 35px;
+      line-height: 20px;
     }
-    // About me section
-    .about-me {
-      padding-top: 70px;
-      h2 {
-        margin-bottom: 10px;
-        padding-top: 40px;
-      }
-      .about-me-flex {
-        margin-right: 15em;
-        ul {
-          margin-right: 25px;
-        }
-        display: flex;
-        justify-content: start;
-        align-content: center;
-        align-items: center;
-        .about-me-items {
-          .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 20px;
-          }
-        }
-      }
+    .description{
+      font-size: 20px;
+      padding: 0 100px 0 0;
     }
 
-    // Education
-    .education-section {
-      margin-bottom: 10em;
-      padding-top: 15px;
-      h2 {
-        margin-bottom: 30px;
-        padding-top: 30px;
-      }
-      .education-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        padding-top: 20px;
-        row-gap: 0;
-
-        .grid-items {
-          .description {
-            margin-bottom: 10px;
-          }
-        }
-      }
+    h1,
+    span {
+      padding: 20px 0;
+      font-size: 50px;
     }
-    // portfolio
-
-    .portfolio-section {
-      margin-bottom: 3em;
-      .project-heading {
-        font-size: 42px;
-        word-spacing: 2px;
-        text-align: center;
-        font-weight: lighter;
-        color: white;
-        letter-spacing: 2px;
-        padding: 12px;
-      }
-      span {
-        color: $secondary;
-      }
-      .hr {
-        height: 0.5px;
-        width: 100%;
-        background: #646464;
-      }
-      .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        .card {
-          height: 17rem;
-          // width: 15em;
-        }
-      }
+    .toggle {
+      display: none;
     }
 
-    .contact-me {
-      margin-bottom: 5em;
-      .project-heading {
-        margin-bottom: 30px;
-        // padding-top: 30px;
-      }
+    .cancel {
+      display: none;
     }
-    .contact-flex {
+  }
+  // About me section
+  .about-me {
+    padding-top: 8em;
+    margin-bottom: 5em;
+    .about-me-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      form {
-        width: 40em;
-      }
-      h3 {
-        font-size: 30px;
-        font-weight: 200;
-        letter-spacing: 5px;
+      align-content: center;
+      .about-me-items {
+        .experience-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 2fr);
+          column-gap: 15px;
+          .experience-grid-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $button-bg-color;
+            width: 350px;
+            height: 350px;
+            text-align: center;
+            :first-child {
+              color: $secondary;
+              font-size: 38px;
+              padding-bottom: 15px;
+              font-weight: lighter;
+            }
+          }
+        }
       }
     }
+  }
+  // Education section
+  .education-section {
+    padding-top: 5em;
+    padding-bottom: 7em;
+    
+    h2 {
+      margin-bottom: 30px;
+      padding-top: 15px;
+    }
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 20px;
+      row-gap: 0;
+
+      .grid-items {
+        .graduation-cap{
+          .year{
+            width:70%;
+            padding: 5px;
+            text-align: center;
+          }
+        }
+        .description {
+          margin-bottom: 10px;
+          
+        }
+      }
+    }
+  }
+  // portfolio section
+  .portfolio-section {
+    padding-top: 0.5em;
+    .project-heading {
+      font-size: 42px;
+      word-spacing: 2px;
+      text-align: center;
+      font-weight: lighter;
+      color: white;
+      letter-spacing: 2px;
+      padding: 12px;
+    }
+    span {
+      color: $secondary;
+    }
+    .hr {
+      height: 0.5px;
+      width: 100%;
+      background: #646464;
+      margin-top: 15px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 270px);
+      .card {
+        max-height: 15rem;
+        max-width: 20rem;
+      }
+    }
+  }
+  // Contact me
+  .contact-me {
+    h2{
+      margin-bottom: .5em;
+    }
+    padding-top: 4em;
+    .contact-flex{
+      .contact-flex-items{
+        h3{
+          font-size: 30px;
+          letter-spacing: 15px;
+          line-height: 35px;
+        }
+        ul{
+          text-align: left;
+          
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .form {
+        width: 35em;
+        ul {
+          li input[type="text"],
+          input[type="email"] {
+            font-size: 16px;
+            padding: 15px;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(26, 25, 25);
+            border: none;
+            margin-top: 20px;
+            outline: none;
+          }
+          li {
+            textarea {
+              height: 150px;
+              width: 100%;
+              padding: 15px;
+              background-color: rgb(26, 25, 25);
+              border: none;
+              margin-top: 20px;
+              outline: none;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    } 
   }
 }

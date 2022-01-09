@@ -1,0 +1,31 @@
+
+.intro{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.typed-text{
+    font-weight: normal;
+    color: #dd7732;
+}
+
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background-color: #ccc;
+    animation: blink 1s infinite;
+}
+
+.typing.cursor{
+    animation: 0s;
+}
+
+@keyframes blink{
+    0%{background-color: #ccc;}
+   45%{background-color: #ccc;}
+    50%{background-color: transparent;}
+    99%{background-color: transparent;}
+    100%{background-color: #ccc;}
+}
