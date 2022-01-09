@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Theme colors */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: #f5f6fb;
+}
+
+body {
+  background-color: #111110;
+}
+
+.side-nav {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #181817;
+  min-height: 100vh;
+  transition: 0.5s ease-out;
+  z-index: 1;
+}
+.side-nav img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 70px 0 0 0;
+  border: 8px solid #fc1782;
+  object-fit: cover;
+}
+.side-nav h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 5px;
+}
+.side-nav p {
+  font-size: 17px;
+  font-weight: 300;
+  padding-bottom: 7px;
+}
+.side-nav ul {
+  margin: 20px 15px;
+  background-color: #181817;
+  cursor: pointer;
+}
+.side-nav ul :hover {
+  background-color: #fc1782;
+}
+.side-nav ul li {
+  font-size: 18px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 100px;
+  background-color: #353533;
+  margin: 12px;
+}
+
+.home-section {
+  text-align: left;
+  margin: 0px 18px 70px 22px;
+  padding-top: 11em;
+}
+.home-section .toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #353533;
+  width: 50px;
+  cursor: pointer;
+  padding: 5px 5px;
+  z-index: 1;
+}
+.home-section .toggle div {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px;
+}
+.home-section .cancel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #353533;
+  width: 50px;
+  cursor: pointer;
+  padding: 3px 3px;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+}
+.home-section .cancel p {
+  margin: 2px;
+  text-align: center;
+  font-size: 25px;
+}
+.home-section p {
+  font-size: 30px;
+}
+.home-section h1 {
+  margin: 15px 0;
+}
+.home-section h1,
+.home-section span {
+  font-size: 40px;
+}
+.home-section span {
+  color: #fc1782;
+  font-size: 30px;
+}
+.home-section .description {
+  font-size: 17px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.home-section a {
+  background-color: #292927;
+  font-size: 22px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.home-section a:hover {
+  background-color: #fc1782;
+}
+.home-section .fas {
+  margin: 10px;
+}
+
+.about-me {
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
+}
+.about-me h2 {
+  font-size: 40px;
+  font-weight: lighter;
+  color: #fc1782;
+  letter-spacing: 1.5px;
+}
+.about-me span {
+  color: white;
+}
+.about-me .hr {
+  height: 0.5px;
+  width: 100%;
+  background: #646464;
+  margin-top: 10px;
+}
+.about-me .about-me-flex li {
+  color: white;
+  font-size: 17px;
+  padding: 7px 0;
+  line-height: 30px;
+  font-weight: 500;
+}
+.about-me .about-me-flex span {
+  color: #fc1782;
+}
+.about-me .about-me-flex button {
+  background-color: #292927;
+  font-size: 20px;
+  padding: 7px;
+  width: 240px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+}
+.about-me .about-me-flex button:hover {
+  background-color: #fc1782;
+}
+.about-me .about-me-flex button .fas {
+  margin-left: 15px;
+}
+.about-me .about-me-flex .about-me-items .experience-grid {
+  margin: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 200px);
+  row-gap: 20px;
+}
+.about-me .about-me-flex .about-me-items .experience-grid .experience-grid-items {
+  background-color: #292927;
+  padding: 20px;
+  text-align: center;
+  max-width: 140px;
+  max-height: 140px;
+}
+.about-me .about-me-flex .about-me-items .experience-grid .experience-grid-items :first-child {
+  color: #fc1782;
+  font-size: 40px;
+  padding-bottom: 15px;
+  font-weight: lighter;
+}
+.about-me .about-me-flex .about-me-items .experience-grid .experience-grid-items h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: 25px;
+}
+
+.education-section {
+  text-align: left;
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
+}
+.education-section .project-heading {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+}
+.education-section span {
+  color: #fc1782;
+}
+.education-section .hr {
+  height: 0.5px;
+  width: 100%;
+  background: #646464;
+  margin-top: 10px;
+}
+.education-section .education-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 20px;
+}
+.education-section .education-grid h2 {
+  margin: 5px 20px;
+  padding-left: 30px;
+  border-left: 5px solid #fc1782;
+  font-weight: 400;
+  font-size: 18px;
+}
+.education-section .education-grid .grid-items .description {
+  margin: 10px 10px 40px 20px;
+  border-left: 2px solid white;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: normal;
+  height: 20vh;
+}
+.education-section .graduation-cap {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+}
+.education-section .graduation-cap .year {
+  background-color: #292927;
+  padding: 10px;
+  border-radius: 40px;
+  width: 50%;
+  font-size: 14px;
+  text-align: left;
+}
+.education-section .graduation-cap .graduation-items {
+  background-color: #fc1782;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.education-section .graduation-cap .graduation-items .fas {
+  font-size: 25px;
+}
+.education-section .graduation-cap .graduation-items .grid-items {
+  border-left: 10px solid white;
+}
+
+.portfolio-section {
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
+}
+.portfolio-section .project-heading {
+  font-size: 40px;
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 1.5px;
+}
+.portfolio-section span {
+  color: #fc1782;
+}
+.portfolio-section .hr {
+  height: 0.5px;
+  width: 100%;
+  background: #646464;
+  margin-top: 10px;
+}
+.portfolio-section .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.portfolio-section .container .card {
+  border-radius: 12px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  overflow: hidden;
+}
+.portfolio-section .container .card .imgBx,
+.portfolio-section .container .card .contentbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-section .container .card .imgBx img,
+.portfolio-section .container .card .contentbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.portfolio-section .container .card .contentbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out;
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+.portfolio-section .container .card:hover .contentbox::before {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+.portfolio-section .container .card .contentbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-section .container .card .contentbox .content {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateX(-300px);
+  transition-delay: 0s;
+}
+.portfolio-section .container .card .contentbox .content h3 {
+  font-size: 1.3em;
+  color: #fc1782;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.portfolio-section .container .card .contentbox .content p {
+  font-size: 15px;
+  line-height: 1.4em;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 25px;
+}
+.portfolio-section .container .card .contentbox .content a {
+  background-color: #fc1782;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 5px;
+}
+.portfolio-section .container :hover .contentbox .content {
+  transform: translateX(0px);
+  transition-delay: 0.5s;
+}
+
+.contact-me {
+  margin: 0px 18px 70px 22px;
+  padding-top: 2em;
+}
+.contact-me .hr {
+  height: 0.5px;
+  width: 100%;
+  background: #646464;
+  margin-top: 10px;
+}
+.contact-me .project-heading {
+  font-size: 40px;
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 1.5px;
+}
+.contact-me span {
+  color: #fc1782;
+}
+.contact-me .contact-flex-items h3 {
+  font-size: 25px;
+  color: white;
+  padding: 40px 20px 20px 10px;
+  font-weight: 300;
+}
+.contact-me .contact-flex-items li {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+.contact-me .contact-flex-items li .far,
+.contact-me .contact-flex-items li .fas {
+  color: #fc1782;
+  font-size: 20px;
+  padding: 10px;
+}
+.contact-me .form ul {
+  margin: 20px;
+}
+.contact-me .form ul li input[type=text],
+.contact-me .form ul input[type=email] {
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  background-color: #1a1919;
+  border: none;
+  margin-top: 20px;
+  outline: none;
+}
+.contact-me .form ul li textarea {
+  height: 150px;
+  width: 100%;
+  padding: 15px;
+  background-color: #1a1919;
+  border: none;
+  margin-top: 20px;
+  outline: none;
+  font-size: 16px;
+}
+.contact-me .btn button {
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin: 0 20px;
+  background-color: #1a1919;
+}
+.contact-me .btn button:hover {
+  background-color: #fc1782;
+}
+.contact-me .btn button .far {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .side-nav {
+    text-align: center;
+    width: 25%;
+    position: fixed;
+    max-height: 110vh;
+    margin: 0;
+    display: block;
+  }
+
+  .main-section {
+    margin-left: 25%;
+    padding: 20px;
+    line-height: 23.04px;
+    letter-spacing: normal;
+  }
+
+  .home-section {
+    padding-top: 10em 20em;
+  }
+  .home-section p {
+    font-size: 35px;
+    line-height: 20px;
+  }
+  .home-section .description {
+    font-size: 20px;
+    padding: 0 100px 0 0;
+  }
+  .home-section h1,
+.home-section span {
+    padding: 20px 0;
+    font-size: 50px;
+  }
+  .home-section .toggle {
+    display: none;
+  }
+  .home-section .cancel {
+    display: none;
+  }
+
+  .about-me {
+    padding-top: 8em;
+    margin-bottom: 5em;
+  }
+  .about-me .about-me-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  .about-me .about-me-flex .about-me-items .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    column-gap: 15px;
+  }
+  .about-me .about-me-flex .about-me-items .experience-grid .experience-grid-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #292927;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+  }
+  .about-me .about-me-flex .about-me-items .experience-grid .experience-grid-items :first-child {
+    color: #fc1782;
+    font-size: 38px;
+    padding-bottom: 15px;
+    font-weight: lighter;
+  }
+
+  .education-section {
+    padding-top: 5em;
+    padding-bottom: 7em;
+  }
+  .education-section h2 {
+    margin-bottom: 30px;
+    padding-top: 15px;
+  }
+  .education-section .education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
+    row-gap: 0;
+  }
+  .education-section .education-grid .grid-items .graduation-cap .year {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+  }
+  .education-section .education-grid .grid-items .description {
+    margin-bottom: 10px;
+  }
+
+  .portfolio-section {
+    padding-top: 0.5em;
+  }
+  .portfolio-section .project-heading {
+    font-size: 42px;
+    word-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2px;
+    padding: 12px;
+  }
+  .portfolio-section span {
+    color: #fc1782;
+  }
+  .portfolio-section .hr {
+    height: 0.5px;
+    width: 100%;
+    background: #646464;
+    margin-top: 15px;
+  }
+  .portfolio-section .container {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+  }
+  .portfolio-section .container .card {
+    max-height: 15rem;
+    max-width: 20rem;
+  }
+
+  .contact-me {
+    padding-top: 4em;
+  }
+  .contact-me h2 {
+    margin-bottom: 0.5em;
+  }
+  .contact-me .contact-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-me .contact-flex .contact-flex-items h3 {
+    font-size: 30px;
+    letter-spacing: 15px;
+    line-height: 35px;
+  }
+  .contact-me .contact-flex .contact-flex-items ul {
+    text-align: left;
+  }
+  .contact-me .contact-flex .form {
+    width: 35em;
+  }
+  .contact-me .contact-flex .form ul li input[type=text],
+.contact-me .contact-flex .form ul input[type=email] {
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: #1a1919;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+  }
+  .contact-me .contact-flex .form ul li textarea {
+    height: 150px;
+    width: 100%;
+    padding: 15px;
+    background-color: #1a1919;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+    font-size: 16px;
+  }
+}
